@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98.853" height="100.721" viewBox="0 0 98.853 100.721">
+  <g id="Group_2" data-name="Group 2" transform="translate(-47.287 -187.64)">
+    <g id="Group_1" data-name="Group 1" transform="translate(-80.287 112.87)">
+      <path id="Path_1" data-name="Path 1" d="M166,81.77c-9.673,0,0,50.426,0,50.426h38.691S175.673,81.77,166,81.77Z" transform="translate(11 -7)" fill="#ff666f"/>
+      <path id="Path_2" data-name="Path 2" d="M166,81.77c-9.673,0,0,50.426,0,50.426h38.691S175.673,81.77,166,81.77Z" transform="translate(343 257.26) rotate(180)" fill="#ff666f"/>
+      <path id="Path_4" data-name="Path 4" d="M166,81.77c-9.673,0,0,50.426,0,50.426h38.691S175.673,81.77,166,81.77Z" transform="translate(45.804 291.196) rotate(-90)" fill="#ff666f"/>
+      <path id="Path_3" data-name="Path 3" d="M166,81.77c-9.673,0,0,50.426,0,50.426h38.691S175.673,81.77,166,81.77Z" transform="translate(308.196 -40.936) rotate(90)" fill="#ff666f"/>
+    </g>
+    <path id="Icon_awesome-plane" data-name="Icon awesome-plane" d="M33.75,13.5H25.714L18.324.567A1.126,1.126,0,0,0,17.347,0H12.741A1.125,1.125,0,0,0,11.66,1.434L15.107,13.5H7.875L4.838,9.45a1.125,1.125,0,0,0-.9-.45H1.126A1.125,1.125,0,0,0,.034,10.4L2.25,18,.034,25.6A1.125,1.125,0,0,0,1.126,27H3.938a1.124,1.124,0,0,0,.9-.45L7.875,22.5h7.232L11.66,34.566A1.125,1.125,0,0,0,12.741,36h4.605a1.126,1.126,0,0,0,.977-.567L25.714,22.5H33.75c2.486,0,6.75-2.014,6.75-4.5S36.236,13.5,33.75,13.5Z" transform="translate(69.631 237.228) rotate(-40)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*:focus {
+  outline: none;
+}
+body {
+  height: 100%;
+  width: 100%;
+  font-family: $fontMukta;
+  font-size: 16px;
+  overflow-x: hidden;
+  background: linear-gradient($bg-dark-blue, $bg-light-blue);
+}
+ul {
+  cursor: pointer;
+}
+li {
+  width: 450px;
+  margin-left: 10px;
+  padding: 12px;
+  list-style-type: none;
+  background-color: $white;
+}
+.home__container {
+  height: calc(100vh - 60px);
+  width: 100vw;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/map.png");
+  background-size: 100%;
+}
+.home__heading {
+  margin-top: -40px;
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  & img {
+    height: 30px;
+    margin-left: 20px;
+  }
+  & h1 {
+    color: $white;
+    padding: 10px 0 10px 0;
+    & .dot {
+      padding-left: 8px;
+      font-size: 2rem;
+      color: $primary;
+    }
+  }
+}
+.search__wrapper {
+  display: flex;
+  width: 1000px;
+  height: 250px;
+  background-color: $white;
+  border-radius: 5px;
+}
+
+.search__box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio__buttons {
+  padding: 10px;
+  display: flex;
+  margin-left: 10px;
+  flex-direction: row;
+  & label {
+    font-size: 1.1rem;
+  }
+  & .radio_option {
+    margin: 10px;
+  }
+}
+
+#statelist {
+  position: absolute;
+  z-index: 99;
+}

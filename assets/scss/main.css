@@ -1,0 +1,739 @@
+/*
+===================================================
+===================================================
+AIRLINES RESERVATION SYSTEM - v0.0.1
+Copyright 2021 bitScript Official (Ayush Kr. Verma)
+===================================================
+===================================================
+*/
+.alert {
+  color: #fa314a;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1b2130), to(#2e3952));
+  background: linear-gradient(#1b2130, #2e3952);
+}
+
+ul {
+  cursor: pointer;
+}
+
+li {
+  width: 450px;
+  margin-left: 10px;
+  padding: 12px;
+  list-style-type: none;
+  background-color: #ffffff;
+}
+
+.home__container {
+  height: calc(100vh - 60px);
+  width: 100vw;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../img/map.png");
+  background-size: 100%;
+}
+
+.home__heading {
+  margin-top: -40px;
+  width: 1000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home__heading img {
+  height: 30px;
+  margin-left: 20px;
+}
+
+.home__heading h1 {
+  color: #ffffff;
+  padding: 10px 0 10px 0;
+}
+
+.home__heading h1 .dot {
+  padding-left: 8px;
+  font-size: 2rem;
+  color: #ff666f;
+}
+
+.search__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  height: 250px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.search__box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.radio__buttons {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.radio__buttons label {
+  font-size: 1.1rem;
+}
+
+.radio__buttons .radio_option {
+  margin: 10px;
+}
+
+#statelist {
+  position: absolute;
+  z-index: 99;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 16px;
+  font-family: "Mukta", sans-serif;
+}
+
+.btn-primary {
+  background-color: #fa314a;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  color: #fa314a;
+}
+
+.btn-submit {
+  background-color: #fa314a;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 0.4rem 2rem;
+}
+
+.btn-submit:hover {
+  background: none;
+  border: 2px solid #fa314a;
+  color: #fa314a;
+  font-size: 1.1rem;
+}
+
+.btn-login-primary {
+  background-color: #fa314a;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 90%;
+  margin: 15px;
+}
+
+.btn-sp-primary {
+  background-color: #fa314a;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.btn-sp-primary:hover {
+  background-color: #ffffff;
+  color: #fa314a;
+}
+
+.navbar__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 999;
+}
+
+.navbar {
+  height: 60px;
+  max-width: 1136px;
+  width: 1136px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Rubik", sans-serif;
+}
+
+.brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  cursor: pointer;
+}
+
+.brand img {
+  height: 40px;
+  width: 40px;
+  margin-right: 8px;
+}
+
+.brand__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brand__heading h1 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.brand__heading h1 span {
+  font-weight: 100;
+}
+
+.brand__img {
+  -webkit-animation-name: logo;
+          animation-name: logo;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+@-webkit-keyframes logo {
+  50% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes logo {
+  50% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+.nav__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav__item {
+  padding: 10px;
+}
+
+.nav__item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.nav__item a:hover {
+  color: #b6bbc9;
+}
+
+.divider {
+  color: #ffffff;
+}
+
+.switch {
+  width: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.switch .icon-switch {
+  cursor: pointer;
+}
+
+.switch .icon-switch img {
+  width: 25px;
+}
+
+.icon {
+  position: absolute;
+  margin: 20px;
+}
+
+.icon img {
+  height: 25px;
+}
+
+.location__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.location__inputs input {
+  margin: 10px;
+  border: 1.8px solid #b6bbc9;
+  border-radius: 3px;
+  padding-left: 3rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.location__inputs input::-webkit-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.location__inputs input:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.location__inputs input::-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.location__inputs input::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.input__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#departure_location,
+#arrival_location {
+  width: 450px;
+  height: 45px;
+}
+
+#departure_date,
+#arrival_date,
+#passenger,
+#f_class {
+  width: 220px;
+  height: 45px;
+}
+
+.date__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  padding-left: 14px;
+  padding-right: 12px;
+}
+
+.date__inputs input,
+.date__inputs select {
+  margin: 10px;
+  border: 1.8px solid #b6bbc9;
+  padding-left: 3rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.date__inputs input > option,
+.date__inputs select > option {
+  padding: 10px;
+}
+
+.date__inputs input::-webkit-input-placeholder,
+.date__inputs select::-webkit-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.date__inputs input:-ms-input-placeholder,
+.date__inputs select:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.date__inputs input::-ms-input-placeholder,
+.date__inputs select::-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.date__inputs input::placeholder,
+.date__inputs select::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.option_txt {
+  font-size: 1rem;
+}
+
+.submit__form {
+  padding-right: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.login__container {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1b2130), to(#2e3952));
+  background: linear-gradient(#1b2130, #2e3952);
+}
+
+.login__heading {
+  margin: -50px 0 20px 0;
+}
+
+.login__heading a > img {
+  height: 45px;
+}
+
+.login__form {
+  height: 380px;
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.register__form {
+  height: 450px;
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.login__title h1 {
+  font-family: "Rubik", sans-serif;
+  border-left: 4px solid #ff666f;
+  padding-left: 5px;
+  color: #2f3542;
+  font-size: 1.4rem;
+}
+
+.login__title p {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+.login__title {
+  width: 100%;
+}
+
+.login__field {
+  margin: 1rem;
+}
+
+.login__field .fa {
+  position: absolute;
+  color: #2e3952;
+}
+
+.login__field .fa.fa-envelope {
+  margin: 13px;
+  font-size: 1rem;
+}
+
+.login__field .fa.fa-lock {
+  margin: 15px;
+  font-size: 1.2rem;
+}
+
+.login__field .fa.fa-user {
+  margin: 13px;
+  font-size: 1.2rem;
+}
+
+.login__field .fa.fa-phone {
+  margin: 14px;
+  font-size: 1.2rem;
+}
+
+.login__field input {
+  width: 300px;
+  height: 45px;
+  padding-left: 2rem;
+  border: 2px solid #b6bbc9;
+  border-radius: 4px;
+}
+
+.login__field input::-webkit-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.login__field input:-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.login__field input::-ms-input-placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.login__field input::placeholder {
+  font-family: "Rubik", sans-serif;
+}
+
+.checkbox_login {
+  padding-left: 1rem;
+}
+
+.login_error {
+  padding-left: 20px;
+  color: #fa314a;
+}
+
+.register_account p {
+  font-size: 1rem;
+  color: #b6bbc9;
+}
+
+.register_account p a {
+  text-decoration: none;
+  color: #2f3542;
+  font-weight: 400;
+}
+
+.sp__wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f2f6;
+}
+
+.sp__header {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1b2130), to(#2e3952));
+  background: linear-gradient(#1b2130, #2e3952);
+}
+
+.brand-a {
+  margin-top: 10px;
+}
+
+.sp__box {
+  width: 1000px;
+  height: 50px;
+  background-color: #ffffff;
+  margin-top: 30px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sp__input i > img {
+  position: absolute;
+  height: 15px;
+  margin: 18px;
+}
+
+.sp__input #sp_departure {
+  border-radius: 4px 0 0 4px;
+  border-right: 1px solid #2f3542;
+}
+
+.sp__input #sp_arrival {
+  border-right: 1px solid #2f3542;
+}
+
+.sp__input #sp_departure_date {
+  border-right: 1px solid #2f3542;
+}
+
+.sp__input #sp_arrival_date {
+  border-right: 1px solid #2f3542;
+}
+
+.sp__input input {
+  height: 50px;
+  width: 200px;
+  padding-left: 40px;
+  border: none;
+}
+
+.sp__input button {
+  height: 50px;
+  width: 200px;
+}
+/*# sourceMappingURL=main.css.map */

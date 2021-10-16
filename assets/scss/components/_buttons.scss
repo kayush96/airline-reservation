@@ -1,0 +1,54 @@
+.btn {
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 16px;
+  font-family: $fontMukta;
+}
+
+.btn-primary {
+  background-color: $primary2;
+  color: $white;
+  font-weight: 300;
+  font-size: 1rem;
+  &:hover {
+    background-color: $white;
+    color: $primary2;
+  }
+}
+
+.btn-submit {
+  background-color: $primary2;
+  color: $white;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 0.4rem 2rem;
+  &:hover {
+    background: none;
+    border: 2px solid $primary2;
+    color: $primary2;
+    font-size: 1.1rem;
+  }
+}
+
+.btn-login-primary {
+  background-color: $primary2;
+  color: $white;
+  font-weight: 400;
+  font-size: 1rem;
+  width: 90%;
+  margin: 15px;
+}
+
+.btn-sp-primary {
+  background-color: $primary2;
+  color: $white;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 0 4px 4px 0;
+  &:hover {
+    background-color: $white;
+    color: $primary2;
+  }
+}
+//Radio button

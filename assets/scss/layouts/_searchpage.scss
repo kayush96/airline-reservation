@@ -1,0 +1,58 @@
+.sp__wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: $gray;
+}
+
+.sp__header {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient($bg-dark-blue, $bg-light-blue);
+}
+
+.brand-a {
+  margin-top: 10px;
+}
+
+.sp__box {
+  width: 1000px;
+  height: 50px;
+  background-color: $white;
+  margin-top: 30px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sp__input {
+  & i > img {
+    position: absolute;
+    height: 15px;
+    margin: 18px;
+  }
+  & #sp_departure {
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid $heading;
+  }
+  & #sp_arrival {
+    border-right: 1px solid $heading;
+  }
+  & #sp_departure_date {
+    border-right: 1px solid $heading;
+  }
+  & #sp_arrival_date {
+    border-right: 1px solid $heading;
+  }
+  & input {
+    height: 50px;
+    width: 200px;
+    padding-left: 40px;
+    border: none;
+  }
+  & button {
+    height: 50px;
+    width: 200px;
+  }
+}

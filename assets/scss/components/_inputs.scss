@@ -1,0 +1,88 @@
+.switch {
+  width: 25px;
+  display: flex;
+  align-items: center;
+  & .icon-switch {
+    cursor: pointer;
+  }
+  & .icon-switch img {
+    width: 25px;
+  }
+}
+.icon {
+  position: absolute;
+  margin: 20px;
+  & img {
+    height: 25px;
+  }
+}
+.location__inputs {
+  display: flex;
+  flex-direction: row;
+  //justify-content: space-around;
+  justify-content: center;
+  & input {
+    margin: 10px;
+    border: 1.8px solid $secondary;
+    border-radius: 3px;
+    padding-left: 3rem;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    &::placeholder {
+      font-family: $fontRubik;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+  }
+}
+.input__field {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#departure_location,
+#arrival_location {
+  width: 450px;
+  height: 45px;
+}
+#departure_date,
+#arrival_date,
+#passenger,
+#f_class {
+  width: 220px;
+  height: 45px;
+}
+.date__inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding-left: 14px;
+  padding-right: 12px;
+  & input,
+  select {
+    margin: 10px;
+    border: 1.8px solid $secondary;
+    padding-left: 3rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    & > option {
+      padding: 10px;
+    }
+    &::placeholder {
+      font-family: $fontRubik;
+      font-size: 1rem;
+      text-transform: capitalize;
+    }
+  }
+}
+.option_txt {
+  font-size: 1rem;
+}
+.submit__form {
+  padding-right: 1.4rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
