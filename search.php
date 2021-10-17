@@ -83,12 +83,7 @@
         </div>
     </div>
     <div class="sp__content">
-      <?php 
-        $trip_choice = $_GET['trip_choice'];
-
-      
-      
-      ?>
+     
     </div>
   </div>
 
