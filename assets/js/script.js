@@ -40,10 +40,10 @@ $(document).ready(function(){
 $(function () {
   $("input[name='trip_choice']").click(function () {
       if ($("#trip_choice2").is(":checked")) {
-          $("#arrival_date").removeAttr("disabled");
+          $("#arrival_date").removeAttr("readonly");
           $("#arrival_date").focus();
       } else {
-          $("#arrival_date").attr("disabled", "disabled");
+          $("#arrival_date").attr("readonly", "readonly");
       }
   });
 });

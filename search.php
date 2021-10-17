@@ -63,25 +63,32 @@
         <div class="sp__box">
           <div class="sp__input">
             <i><img src="assets/img/takeoff.png" alt=""></i>
-            <input type="text" name="sp_departure" id="sp_departure" placeholder="Departure">
+            <input type="text" name="sp_departure" id="sp_departure" placeholder="Departure" value="<?php echo $_GET['loc_departure']; ?>" disabled>
           </div>
           <div class="sp__input">
             <i><img src="assets/img/landing.png" alt=""></i>
-            <input type="text" name="sp_arrival" id="sp_arrival" placeholder="Arrival">
+            <input type="text" name="sp_arrival" id="sp_arrival" placeholder="Arrival" value="<?php echo $_GET['loc_arrival']; ?>" disabled>
           </div>
           <div class="sp__input">
             <i><img src="assets/img/calendar.png" alt=""></i>
-            <input type="text" name="sp_departure_date" id="sp_departure_date" placeholder="Departure Date">
+            <input type="text" name="sp_departure_date" id="sp_departure_date" placeholder="Departure Date" value="<?php  echo $_GET['dd']; ?>" disabled>
           </div>
           <div class="sp__input">
             <i><img src="assets/img/calendar.png" alt=""></i>
-            <input type="text" name="sp_arrival_date" id="sp_arrival_date" placeholder="Return Date">
+            <input type="text" name="sp_arrival_date" id="sp_arrival_date" value="<?php echo $_GET['ad'];?>" placeholder="Return Date" disabled>
           </div>
           <div class="sp__input">
             <button class="btn btn-sp-primary">MODIFY</button>
           </div>
         </div>
+    </div>
+    <div class="sp__content">
+      <?php 
+        $trip_choice = $_GET['trip_choice'];
 
+      
+      
+      ?>
     </div>
   </div>
 

@@ -82,7 +82,7 @@
                   <i class="icon">
                     <img src="assets/img/takeoff.png" alt="takeoff">
                   </i>
-                  <input type="text" id="departure_location" placeholder="Departure (type city or airport)">
+                  <input type="text" id="departure_location" name="loc_departure" placeholder="Departure (type city or airport)">
                   <div id="statelist"></div>
                 </div>
                 <div class="switch">
@@ -94,7 +94,7 @@
                   <i class="icon">
                     <img src="assets/img/landing.png" alt="takeoff">
                   </i>
-                  <input type="text" id="arrival_location" placeholder="Arrival (type city or airport)">
+                  <input type="text" id="arrival_location" name="loc_arrival" placeholder="Arrival (type city or airport)">
                 </div>                
               </div>
             </div>
@@ -105,13 +105,13 @@
                   <i class="icon">
                     <img src="assets/img/calendar.png" alt="takeoff">
                   </i>
-                  <input type="text" id="departure_date" placeholder="Departure Date" onfocus="(this.type='date')" onblur="(this.type='text')"">
+                  <input type="text" id="departure_date" name="dd" placeholder="Departure Date" onfocus="(this.type='date')" onblur="(this.type='text')"">
                 </div>
                 <div class="arrival_date">
                   <i class="icon">
                     <img src="assets/img/calendar.png" alt="takeoff">
                   </i>
-                  <input type="text" id="arrival_date" placeholder="Return Date" onfocus="(this.type='date')" onblur="(this.type='text')" disabled="disabled">
+                  <input type="text" id="arrival_date" name="ad" placeholder="Return Date"  onfocus="(this.type='date')" onblur="(this.type='text')" readonly="readonly">
                 </div>
                 <div class="total_passenger">
                   <i class="icon">
