@@ -1,6 +1,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -125,5 +126,21 @@ body {
 #admin_pass {
   padding-left: 30px;
   margin-left: 10px;
+}
+
+.ad__wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+.ad__sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 360px;
+  background-color: #ff666f;
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,15 @@
+.ad__wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+
+.ad__sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 360px;
+  background-color: $primary;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
