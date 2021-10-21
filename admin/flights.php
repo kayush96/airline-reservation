@@ -8,7 +8,7 @@
 
 <?php include "includes/header.php"; ?>
 
-  <title>GammaFlight &dash; Admin Dashboard</title>
+  <title>GammaFlight &dash; Flights Dashboard</title>
 </head>
 <body>
   <div class="dash__wrapper">
@@ -22,11 +22,11 @@
 
       <div class="dash__pages">
         <ul>
-          <li class="dash__link active">
+          <li class="dash__link ">
             <i class="fa fa-home" aria-hidden="true"></i>
             <a href="dashboard.php">Home</a>
           </li>
-          <li class="dash__link">
+          <li class="dash__link active">
             <i class="fa fa-plane" aria-hidden="true"></i>
             <a href="flights.php">Flights</a>
           </li>

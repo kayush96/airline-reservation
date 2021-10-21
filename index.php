@@ -105,7 +105,7 @@
                   <i class="icon">
                     <img src="assets/img/calendar.png" alt="takeoff">
                   </i>
-                  <input type="text" id="departure_date" name="dd" placeholder="Departure Date" onfocus="(this.type='date')" onblur="(this.type='text')"">
+                  <input type="text" id="departure_date" name="dd" placeholder="Departure Date" onfocus="(this.type='datetime-local')" onblur="(this.type='text')"">
                 </div>
                 <div class="arrival_date">
                   <i class="icon">
