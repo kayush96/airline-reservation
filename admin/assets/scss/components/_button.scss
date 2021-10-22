@@ -1,0 +1,13 @@
+.btn {
+  cursor: pointer;
+  padding: 5px;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: $primary2;
+  color: $white;
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+}

@@ -46,13 +46,20 @@
       </div>
 
       <div class="dash__logout">
-        <button class="btn"><i class="fa fa-power-off" aria-hidden="true"></i> Sign out</button>
+      <a href="validations/logout_script.php">
+          <button class="btn btn-primary">
+            <i class="fa fa-power-off" aria-hidden="true"></i>
+             Sign out
+          </button>
+        </a>
       </div>
     </div>
 
     <!--Main Content-->
     <div class="dash__main">
-
+    <div class="dash__heading">
+        <h1>Flight Details</h1>
+      </div>
     </div>
   </div>
 </body>

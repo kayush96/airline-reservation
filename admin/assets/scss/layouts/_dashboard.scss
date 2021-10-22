@@ -22,8 +22,63 @@
 }
 
 .dash__main {
+  position: relative;
   width: calc(100% - 250px);
   right: 0;
   margin-left: 250px;
   padding: 20px;
+}
+
+.dash__heading {
+  padding: 1rem;
+  & h1 {
+    font-family: $fontRubik;
+    color: $heading;
+  }
+}
+
+.dash__table {
+  margin-top: 20px;
+  width: 98%;
+  background-color: $white;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+//Dashboard details
+
+.dash__details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.detail__container {
+  font-family: $fontRubik;
+  position: relative;
+  height: 100px;
+  width: 220px;
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  & .fa {
+    margin: 30px;
+    position: absolute;
+    font-size: 40px;
+    color: rgba(206, 214, 224, 1);
+  }
+  & p {
+    text-align: right;
+    padding: 20px;
+    font-size: 50px;
+    color: rgba(104, 109, 224, 1);
+  }
+  & span {
+    position: absolute;
+    padding: 10px;
+    margin-top: 60px;
+    margin-left: 20px;
+    font-size: 15px;
+  }
 }

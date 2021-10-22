@@ -27,7 +27,7 @@
   }
 }
 .active {
-  background-color: #dfe4ea;
+  background-color: $gray;
   font-size: 1.1rem;
   border-right: 2px solid $primary;
 }
@@ -42,5 +42,8 @@
 }
 
 .dash__logout {
+  height: 50px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }

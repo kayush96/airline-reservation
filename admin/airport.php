@@ -46,13 +46,52 @@
       </div>
 
       <div class="dash__logout">
-        <button class="btn"><i class="fa fa-power-off" aria-hidden="true"></i> Sign out</button>
+      <a href="validations/logout_script.php">
+          <button class="btn btn-primary">
+            <i class="fa fa-power-off" aria-hidden="true"></i>
+             Sign out
+          </button>
+        </a>
       </div>
     </div>
 
     <!--Main Content-->
     <div class="dash__main">
-
+      <div class="dash__heading">
+        <h1>Airport Details</h1>
+      </div>
+      <?php 
+      
+      $airport_query = "SELECT * FROM location"; 
+      $airport_query_result = pg_query($con, $airport_query) or die(pg_last_error($con));
+      $total_rows = pg_num_rows($airport_query_result);
+      ?>
+      <div class="dash__table">
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Sno.</th>
+              <th>State Code</th>
+              <th>State Name</th>
+              <th>Airport Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            
+            while($row = pg_fetch_array($airport_query_result)) {
+            
+            ?>
+              <tr>
+                <td><?php echo $row['s_id']; ?></td>
+                <td><?php echo $row['s_code']; ?></td>
+                <td><?php echo $row['s_name']; ?></td>
+                <td><?php echo $row['s_airport']; ?></td>
+              </tr>  
+              <?php } ?>        
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </body>
